@@ -3,7 +3,7 @@ const flightRouter = require("./routes/flightRoute");
 
 const app = express();
 
-app.use(json());
+app.use(express.json());
 
 app.use("/api/flights", flightRouter);
 

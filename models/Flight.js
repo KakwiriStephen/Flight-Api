@@ -1,4 +1,4 @@
-exports = flights = [{
+let flights = [{
         id: 1,
         location: "Kenya",
         title: "flight to Kenya",
@@ -47,3 +47,5 @@ exports = flights = [{
         data: "01/12/2022",
     },
 ];
+
+module.exports = flights;

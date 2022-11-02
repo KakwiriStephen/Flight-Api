@@ -1,11 +1,16 @@
 const express = require("express");
-
 const router = express.Router();
-const controller = require("../controllers/flightController");
+const flightController = require("./../controllers/flightController");
 
-router.get("/", controller.example);
-router.get("", controller.example);
-router.post("", controller.example);
-router.patch("", controller.example);
+router
+    .route("/")
+    .get(flightController.getAllFlights)
+    .post(flightController.createFlight);
+
+router
+    .route("/:id")
+    .get(flightController.getOneFlight)
+    .patch(flightController.updateFlight)
+    .delete(flightController.deleteFlight);
 
 module.exports = router;
